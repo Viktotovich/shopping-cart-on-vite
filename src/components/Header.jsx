@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 //SVG icons
 import Favorites from "./svg/Favorites";
 import ProfileIcon from "./svg/Profile-icon";
@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <nav>
       <div className="categories-header">
-        <Link to="/electronics">Electronics</Link>
-        <Link to="/jewelery">Jewelery</Link>
-        <Link to="/mens">Men's Clothing</Link>
-        <Link to="/womens">Women's Clothing</Link>
+        <NavLink to="/electronics">Electronics</NavLink>
+        Jewelery
+        <NavLink to="/mens">Men's Clothing</NavLink>
+        <NavLink to="/womens">Women's Clothing</NavLink>
       </div>
-      <div className="brand-name">Buy-a-Dud</div>
+      <NavLink to="/">Buy A Dude | Fake Store</NavLink>
       <div className="header-icons">
         <SearchIcon />
         <ProfileIcon />
