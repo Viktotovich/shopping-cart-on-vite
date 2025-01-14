@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  border: 1px solid gainsboro;
+  box-shadow: 3px 5px 5px gainsboro;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.686);
+  padding: 0.2rem 0.3rem;
+  margin: 0 0.3rem 0;
+}
+
+nav a.active {
+  color: rgb(46, 114, 114);
+  border-bottom: 1px solid black;
+}
+
+nav a:hover {
+  background-color: rgba(239, 231, 222, 0.572);
+  cursor: pointer;
+  border-radius: 5px;
+  color: black;
+}
+
+nav svg:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}

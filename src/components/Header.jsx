@@ -4,24 +4,26 @@ import Favorites from "./svg/Favorites";
 import ProfileIcon from "./svg/Profile-icon";
 import SearchIcon from "./svg/Search-icon";
 import ShoppingCart from "./svg/cart-svg";
+//styles
+import "../styles/header.css";
 
 export default function Header() {
   return (
     <nav>
       <div className="categories-header">
         <NavLink to="/electronics">Electronics</NavLink>
-        Jewelery
+        <NavLink to="/jewelery">Jewelery</NavLink>
         <NavLink to="/mens">Men's Clothing</NavLink>
         <NavLink to="/womens">Women's Clothing</NavLink>
       </div>
-      <NavLink to="/">Buy A Dude | Fake Store</NavLink>
+      <NavLink to="/">Buy A Dud | Fake Store</NavLink>
       <div className="header-icons">
         <SearchIcon />
         <ProfileIcon />
         <Favorites />
         <Link to="/checkout">
           {/*Both span and shopping cart need props */}
-          <span className="notifications" />
+          <span className="notifications"></span>
           <ShoppingCart />
         </Link>
       </div>
