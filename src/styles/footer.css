@@ -1,0 +1,16 @@
+footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid gainsboro;
+  box-shadow: 1px -5px 5px gainsboro;
+  max-height: 100px;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+}
+
+footer p a {
+  text-decoration: none;
+  display: flex;
+}

@@ -11,7 +11,8 @@ nav {
   box-shadow: 3px 5px 5px gainsboro;
 }
 
-nav a {
+.categories-header > a,
+#company-name {
   text-decoration: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.686);
@@ -36,3 +37,15 @@ nav svg:hover {
   transform: scale(1.2);
   transition: transform 0.2s;
 }
+
+#company-name {
+  font-size: 1.2rem;
+}
+
+nav svg {
+  margin: 0 0.5rem;
+}
+
+/*
+ Add mobile styles too
+*/

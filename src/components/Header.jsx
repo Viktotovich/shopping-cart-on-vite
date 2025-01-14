@@ -16,7 +16,9 @@ export default function Header() {
         <NavLink to="/mens">Men's Clothing</NavLink>
         <NavLink to="/womens">Women's Clothing</NavLink>
       </div>
-      <NavLink to="/">Buy A Dud | Fake Store</NavLink>
+      <NavLink to="/" id="company-name">
+        Buy A Dud | Fake Store
+      </NavLink>
       <div className="header-icons">
         <SearchIcon />
         <ProfileIcon />
