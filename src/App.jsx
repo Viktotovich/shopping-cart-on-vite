@@ -1,18 +1,12 @@
 // Don't use anchor tags, instead use Link
 import { Link } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <nav>
-        <h1>Test Route</h1>
-        <hr />
-        <ul>
-          <li>
-            <Link to="test">Take me to Test!</Link>
-          </li>
-        </ul>
-      </nav>
+      <Header></Header>
+      <p>Hello world</p>
     </>
   );
 }
