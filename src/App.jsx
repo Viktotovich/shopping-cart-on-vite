@@ -1,10 +1,11 @@
 import "./styles/global.css";
 import TransparentCard from "./components/Transparent-Card";
-//import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import sortCats from "./utilities/sort-cats";
+import { Link } from "react-router-dom";
 
 function App() {
-  //const { products } = useLoaderData();
+  const { products } = useLoaderData();
 
   return (
     <>
@@ -45,11 +46,12 @@ function App() {
   );
 }
 
+//looks weird - change the styles
 function CTAButtons() {
   return (
     <div className="cta-buttons">
-      <button>Scroll to shop!</button>
-      <button>Take me to content!</button>
+      <button>Scroll to the content!</button>
+      <Link to="/electronics">Take me to the shop!</Link>
     </div>
   );
 }

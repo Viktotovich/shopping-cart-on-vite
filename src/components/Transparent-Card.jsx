@@ -2,7 +2,6 @@ import CartAndSlider from "./Cart-and-slider";
 import "../styles/transparent-card.css";
 
 export default function TransparentCard({ product }) {
-  console.log(product);
   return (
     <div className="transparent-div">
       <TransparentBanner product={product} />
