@@ -1,16 +1,12 @@
 import CartAndSlider from "./Cart-and-slider";
 
-export default function TransparentCard() {
+export default function TransparentCard({ product }) {
+  console.log(product);
   return (
     <div className="transparent-div">
-      <TransparentBanner />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-        delectus, odit doloremque sed rerum cum deleniti quia eaque quasi
-        architecto deserunt, quae cumque tempore qui. Distinctio, hic. Nostrum,
-        laborum libero.
-      </p>
-      <ProductImage />
+      <TransparentBanner product={product} />
+      <p>{product.description}</p>
+      <ProductImage product={product} />
       <br />
       <hr />
       <CartAndSlider />
@@ -18,18 +14,20 @@ export default function TransparentCard() {
   );
 }
 
-function TransparentBanner() {
+function TransparentBanner({ product }) {
   return (
     <div className="transparent-banner">
       <div className="title-and-sub">
-        <h2>Product name</h2>
-        <p>Product subdescription, colors and the type</p>
+        <h2>{product.title}</h2>
+        <p>{product.rating.rate} ⭐</p>
       </div>
-      <p>$1099</p>
+      <p>${product.price}</p>
     </div>
   );
 }
 
-function ProductImage() {
-  return <p>I AM AN IMAGE lol</p>;
+function ProductImage({ product }) {
+  return (
+    <img src={product.image} alt={`${product.title} + ${product.category}`} />
+  );
 }

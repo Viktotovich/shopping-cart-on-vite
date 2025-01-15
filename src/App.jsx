@@ -1,7 +1,11 @@
 import "./styles/global.css";
 import TransparentCard from "./components/Transparent-Card";
+import { useLoaderData } from "react-router-dom";
 
 function App() {
+  const { products } = useLoaderData();
+  console.log(products);
+
   return (
     <>
       <section>
@@ -19,7 +23,7 @@ function App() {
             <CTAButtons />
           </div>
           <div className="second-section">
-            <TransparentCard />
+            <TransparentCard product={products[0]} />
           </div>
           <div className="third-section">
             <p>✔️ Late Deliveries</p>
@@ -48,6 +52,12 @@ function CTAButtons() {
       <button>Take me to content!</button>
     </div>
   );
+}
+
+export async function productLoader() {
+  const data = await fetch("https://fakestoreapi.com/products");
+  const products = await data.json();
+  return { products };
 }
 
 export default App;
