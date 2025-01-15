@@ -3,12 +3,9 @@ import ErrorPage from "./components/ErrorPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { productLoader } from "./App";
-import { electronicsLoader } from "./components/pages/electronics";
-import Electronics from "./components/pages/electronics";
-import { jeweleryLoader } from "./components/pages/jewelery";
-import Jewelery from "./components/pages/jewelery";
-import { mensLoader } from "./components/pages/mens";
-import Mens from "./components/pages/mens";
+import Electronics, { electronicsLoader } from "./components/pages/electronics";
+import Jewelery, { jeweleryLoader } from "./components/pages/jewelery";
+import Mens, { mensLoader } from "./components/pages/mens";
 import Womens, { womensLoader } from "./components/pages/womens";
 
 const routes = [

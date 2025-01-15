@@ -1,4 +1,5 @@
 import CartAndSlider from "./Cart-and-slider";
+import { useState } from "react";
 
 export default function ProductGrid({ products, category }) {
   return (
@@ -20,7 +21,7 @@ function Product({ product }) {
       <img src={product.image} alt={product.title} />
       <p className="p-grid-desc">{product.description}</p>
       <p className="p-grid-price">{product.price}</p>
-      <CartAndSlider />
+      <CartAndSlider product={product} />
     </div>
   );
 }

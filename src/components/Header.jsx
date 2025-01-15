@@ -24,7 +24,6 @@ export default function Header() {
         <ProfileIcon />
         <Favorites />
         <Link to="/checkout">
-          {/*Both span and shopping cart need props */}
           <span className="notifications"></span>
           <ShoppingCart />
         </Link>
