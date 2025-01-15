@@ -7,6 +7,19 @@ import Electronics, { electronicsLoader } from "./components/pages/electronics";
 import Jewelery, { jeweleryLoader } from "./components/pages/jewelery";
 import Mens, { mensLoader } from "./components/pages/mens";
 import Womens, { womensLoader } from "./components/pages/womens";
+import Checkout from "./components/pages/checkout";
+
+/*Making this work is my only bet at passing props in a sane way that doesn't do anything 
+that breaks the rules of React */
+function Layout({ child }) {
+  return (
+    <>
+      <Header />
+      {child}
+      <Footer />
+    </>
+  );
+}
 
 const routes = [
   {
@@ -14,9 +27,7 @@ const routes = [
     loader: productLoader,
     element: (
       <>
-        <Header />
-        <App />
-        <Footer />
+        <Layout child={<App />} />
       </>
     ),
     errorElement: (
@@ -67,6 +78,16 @@ const routes = [
       <>
         <Header />
         <Womens />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "checkout",
+    element: (
+      <>
+        <Header />
+        <Checkout />
         <Footer />
       </>
     ),
