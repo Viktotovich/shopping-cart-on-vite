@@ -1,10 +1,10 @@
 import "./styles/global.css";
 import TransparentCard from "./components/Transparent-Card";
 import { useLoaderData } from "react-router-dom";
+import sortCats from "./utilities/sort-cats";
 
 function App() {
   const { products } = useLoaderData();
-  console.log(products);
 
   return (
     <>
@@ -57,6 +57,7 @@ function CTAButtons() {
 export async function productLoader() {
   const data = await fetch("https://fakestoreapi.com/products");
   const products = await data.json();
+  sortCats.init(await products);
   return { products };
 }
 

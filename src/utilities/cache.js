@@ -1,9 +1,9 @@
 const manualCacheController = {
   categories: {},
-  setCache: function (data, category) {
+  setCache: function (category, data) {
     manualCacheController.categories[category] = data;
   },
-  getCache: function (category) {
+  get: function (category) {
     return manualCacheController.categories[category];
   },
 };
