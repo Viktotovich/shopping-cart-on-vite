@@ -3,6 +3,7 @@ import TransparentCard from "./components/Transparent-Card";
 import { useLoaderData } from "react-router-dom";
 import sortCats from "./utilities/sort-cats";
 import { Link } from "react-router-dom";
+import "./styles/all-products.css";
 
 function App() {
   const { products } = useLoaderData();

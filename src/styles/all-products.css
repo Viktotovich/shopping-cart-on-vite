@@ -1,0 +1,75 @@
+.products-container {
+  margin: 5rem 8rem;
+}
+
+.products-container img {
+  max-width: 200px;
+  mix-blend-mode: darken;
+}
+
+.p-cat {
+  text-align: center;
+  font-size: 2.1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 3rem;
+}
+
+.p-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.product {
+  background: linear-gradient(
+      12deg,
+      rgba(33, 14, 154, 0.215),
+      rgba(73, 129, 227, 0.172) 70.71%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(69, 63, 152, 0.416),
+      rgba(0, 255, 0, 0.12) 70.71%
+    );
+  border-radius: 12px;
+  padding: 4rem 2.5rem 1rem;
+  color: rgba(9, 7, 56, 0.899);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-grid-title {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.p-grid-desc {
+  margin: 2rem 0;
+  padding: 0.7rem 0.5rem;
+  background-color: rgba(240, 248, 255, 0.638);
+  border-radius: 5px;
+}
+
+.p-grid-price {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.p-grid-price::before {
+  content: "$";
+}
+
+.product .c-and-s {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.product .c-and-s .increment-container {
+  display: flex;
+  align-items: center;
+}
