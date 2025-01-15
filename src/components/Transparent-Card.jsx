@@ -28,6 +28,8 @@ function TransparentBanner({ product }) {
 
 function ProductImage({ product }) {
   return (
-    <img src={product.image} alt={`${product.title} + ${product.category}`} />
+    <div className="t-img-wrapper">
+      <img src={product.image} alt={`${product.title} + ${product.category}`} />
+    </div>
   );
 }

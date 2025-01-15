@@ -20,6 +20,11 @@
   mix-blend-mode: darken;
 }
 
+.t-img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .title-and-sub {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
