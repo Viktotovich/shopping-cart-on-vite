@@ -1,14 +1,16 @@
 import CartAndSlider from "./Cart-and-slider";
+import "../styles/transparent-card.css";
 
 export default function TransparentCard({ product }) {
   console.log(product);
   return (
     <div className="transparent-div">
       <TransparentBanner product={product} />
-      <p>{product.description}</p>
+      <div className="price-and-desc">
+        <p className="product-description">{product.description}</p>
+        <p className="product-price">${product.price}</p>
+      </div>
       <ProductImage product={product} />
-      <br />
-      <hr />
       <CartAndSlider />
     </div>
   );
@@ -19,9 +21,8 @@ function TransparentBanner({ product }) {
     <div className="transparent-banner">
       <div className="title-and-sub">
         <h2>{product.title}</h2>
-        <p>{product.rating.rate} ⭐</p>
+        <p>{product.rating.rate} ★★★</p>
       </div>
-      <p>${product.price}</p>
     </div>
   );
 }

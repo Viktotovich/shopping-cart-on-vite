@@ -3,11 +3,12 @@ import ErrorPage from "./components/ErrorPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { productLoader } from "./App";
+import Electronics from "./components/pages/electronics";
 
 const routes = [
   {
     path: "/",
-    loader: productLoader,
+    //loader: productLoader,
     element: (
       <>
         <Header />
@@ -19,6 +20,16 @@ const routes = [
       <>
         <Header />
         <ErrorPage />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "electronics",
+    element: (
+      <>
+        <Header />
+        <Electronics />
         <Footer />
       </>
     ),

@@ -11,9 +11,9 @@ export default function CartAndSlider() {
 function Increment() {
   return (
     <div className="increment-container">
-      <p className="decrement">-</p>
+      <button className="decrement">-</button>
       <p className="current-count">0</p>
-      <p className="increment">+</p>
+      <button className="increment">+</button>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import "./styles/global.css";
 import TransparentCard from "./components/Transparent-Card";
-import { useLoaderData } from "react-router-dom";
+//import { useLoaderData } from "react-router-dom";
 import sortCats from "./utilities/sort-cats";
 
 function App() {
-  const { products } = useLoaderData();
+  //const { products } = useLoaderData();
 
   return (
     <>
