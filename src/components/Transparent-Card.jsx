@@ -10,7 +10,7 @@ export default function TransparentCard({ product }) {
         <p className="product-price">${product.price}</p>
       </div>
       <ProductImage product={product} />
-      <CartAndSlider />
+      <CartAndSlider product={product} />
     </div>
   );
 }
