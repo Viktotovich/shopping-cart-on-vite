@@ -27,7 +27,7 @@ export default function Header({ cartItems }) {
           <span className="notifications">
             {cartItems.length > 0 ? cartItems.length : ""}
           </span>
-          <ShoppingCart isEmpty={cartItems === 0} />
+          <ShoppingCart isEmpty={cartItems.length === 0} />
         </Link>
       </div>
     </nav>
