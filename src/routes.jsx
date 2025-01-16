@@ -9,12 +9,16 @@ import Mens, { mensLoader } from "./components/pages/mens";
 import Womens, { womensLoader } from "./components/pages/womens";
 import Checkout from "./components/pages/checkout";
 
+//hooks
+import { useState } from "react";
+
 /*Making this work is my only bet at passing props in a sane way that doesn't do anything 
 that breaks the rules of React */
 function Layout({ child }) {
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems} />
       {child}
       <Footer />
     </>
@@ -32,9 +36,7 @@ const routes = [
     ),
     errorElement: (
       <>
-        <Header />
-        <ErrorPage />
-        <Footer />
+        <Layout child={<ErrorPage />} />
       </>
     ),
   },
@@ -43,9 +45,7 @@ const routes = [
     loader: electronicsLoader,
     element: (
       <>
-        <Header />
-        <Electronics />
-        <Footer />
+        <Layout child={<Electronics />} />
       </>
     ),
   },
@@ -54,9 +54,7 @@ const routes = [
     loader: jeweleryLoader,
     element: (
       <>
-        <Header />
-        <Jewelery />
-        <Footer />
+        <Layout child={<Jewelery />} />
       </>
     ),
   },
@@ -65,9 +63,7 @@ const routes = [
     loader: mensLoader,
     element: (
       <>
-        <Header />
-        <Mens />
-        <Footer />
+        <Layout child={<Mens />} />
       </>
     ),
   },
@@ -76,9 +72,7 @@ const routes = [
     loader: womensLoader,
     element: (
       <>
-        <Header />
-        <Womens />
-        <Footer />
+        <Layout child={<Womens />} />
       </>
     ),
   },
@@ -86,9 +80,7 @@ const routes = [
     path: "checkout",
     element: (
       <>
-        <Header />
-        <Checkout />
-        <Footer />
+        <Layout child={<Checkout />} />
       </>
     ),
   },

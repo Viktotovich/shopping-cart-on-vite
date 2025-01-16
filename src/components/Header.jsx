@@ -7,7 +7,7 @@ import ShoppingCart from "./svg/cart-svg";
 //styles
 import "../styles/header.css";
 
-export default function Header() {
+export default function Header({ cartItems }) {
   return (
     <nav>
       <div className="categories-header">
@@ -24,8 +24,10 @@ export default function Header() {
         <ProfileIcon />
         <Favorites />
         <Link to="/checkout">
-          <span className="notifications"></span>
-          <ShoppingCart />
+          <span className="notifications">
+            {cartItems.length > 0 ? cartItems.length : ""}
+          </span>
+          <ShoppingCart isEmpty={cartItems === 0} />
         </Link>
       </div>
     </nav>
