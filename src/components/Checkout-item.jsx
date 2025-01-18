@@ -96,10 +96,16 @@ function UpdateCart({ cartItem, count, index }) {
   return <button onClick={handleUpdateCart}>Update</button>;
 }
 
-function RemoveFromCart({ cartItem, index }) {
+function RemoveFromCart({ index }) {
+  const { deleteFromCart } = useContext(ShopContext);
+
+  function handleDelete() {
+    deleteFromCart(index);
+  }
+
   return (
     <div className="remove-from-cart-container">
-      <button>Remove from cart</button>
+      <button onClick={handleDelete}>Remove from cart</button>
     </div>
   );
 }

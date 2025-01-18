@@ -29,9 +29,17 @@ function Layout({ child }) {
     setCartItems(cartCopy);
   }
 
+  function deleteFromCart(index) {
+    const cartCopy = cartItems.slice(0);
+    cartCopy.splice(index, 1);
+    setCartItems(cartCopy);
+  }
+
   return (
     <>
-      <ShopContext.Provider value={{ addToCart, cartItems, updateCart }}>
+      <ShopContext.Provider
+        value={{ addToCart, cartItems, updateCart, deleteFromCart }}
+      >
         <Header cartItems={cartItems} addToCart={addToCart} />
         {child}
         <Footer />
