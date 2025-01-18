@@ -1,0 +1,77 @@
+.landing-content {
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-section {
+  max-width: 55ch;
+}
+
+.first-section h2,
+.first-section p {
+  margin-bottom: 0.5rem;
+  color: rgba(9, 7, 56, 0.899);
+}
+
+.first-section .cta-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cta-buttons button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+}
+
+.cta-buttons a,
+.cta-buttons button {
+  background-color: rgba(6, 3, 27, 0.685);
+  appearance: none;
+  border: none;
+  padding: 0.6rem 2rem;
+  color: white;
+  border-radius: 25px;
+}
+
+.cta-buttons a:hover,
+.cta-buttons button:hover {
+  cursor: pointer;
+  background-color: rgba(35, 23, 110, 0.716);
+  transform: scale(1.04);
+  transition: all 0.1s;
+}
+
+.third-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+}
+
+.third-section p {
+  margin-right: 2rem;
+  font-size: 1.1rem;
+}
+
+.fourth-section {
+  margin-bottom: 1rem;
+}
+
+.fourth-section h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+.fourth-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}

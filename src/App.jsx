@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import sortCats from "./utilities/sort-cats";
 import { Link } from "react-router-dom";
 import "./styles/all-products.css";
+import "./styles/main-page.css";
 
 function App() {
   const { products } = useLoaderData();
