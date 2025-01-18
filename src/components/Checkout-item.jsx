@@ -4,7 +4,7 @@ import "../styles/checkout-items.css";
 
 export default function CheckoutItem({ cartItem, index }) {
   return (
-    <div className="checkout-container">
+    <div className="checkout-container" key={cartItem.product.title}>
       <div className="tile-x-amount">
         <p>{cartItem.product.title}</p>
         <p>{cartItem.count} Piece(s)</p>
