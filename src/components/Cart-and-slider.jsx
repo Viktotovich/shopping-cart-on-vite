@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ShopContext } from "../routes";
 
 export default function CartAndSlider({ product }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   function incrementCount() {
     if (count < 9) {
@@ -14,7 +14,7 @@ export default function CartAndSlider({ product }) {
   }
 
   function decrementCount() {
-    if (count > 0) {
+    if (count > 1) {
       setCount((count) => count - 1);
     }
   }

@@ -1,0 +1,12 @@
+.cart-svg-container {
+  position: relative;
+}
+
+.notifications {
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  background-color: rgba(255, 0, 0, 0.362);
+  border-radius: 15px;
+  padding: 0 0.2rem;
+}

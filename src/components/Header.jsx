@@ -6,6 +6,7 @@ import SearchIcon from "./svg/Search-icon";
 import ShoppingCart from "./svg/cart-svg";
 //styles
 import "../styles/header.css";
+import "../styles/notification.css";
 
 export default function Header({ cartItems }) {
   return (
@@ -23,7 +24,7 @@ export default function Header({ cartItems }) {
         <SearchIcon />
         <ProfileIcon />
         <Favorites />
-        <Link to="/checkout">
+        <Link to="/checkout" className="cart-svg-container">
           <span className="notifications">
             {cartItems.length > 0 ? cartItems.length : ""}
           </span>

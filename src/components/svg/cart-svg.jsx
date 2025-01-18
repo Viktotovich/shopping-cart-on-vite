@@ -7,6 +7,7 @@ export default function ShoppingCart({ isEmpty = true }) {
 function CartIconEmpty() {
   return (
     <svg
+      className="cart-svg"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -28,6 +29,7 @@ function CartIconEmpty() {
 function CartIconFull() {
   return (
     <svg
+      className="cart-svg"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
