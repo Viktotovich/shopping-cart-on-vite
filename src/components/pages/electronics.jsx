@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import ProductGrid from "../product-grid";
 
 export default function Electronics() {
-  const products = useLoaderData();
   return (
     <section>
       <ProductGrid products={products} category={"Electronics"} />

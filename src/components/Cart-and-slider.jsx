@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { ShopContext } from "../routes";
 
 export default function CartAndSlider({ product }) {
   const [count, setCount] = useState(0);
@@ -6,6 +8,8 @@ export default function CartAndSlider({ product }) {
   function incrementCount() {
     if (count < 9) {
       setCount((count) => count + 1);
+    } else {
+      alert("You cannot request more than 9 items");
     }
   }
 
@@ -46,14 +50,16 @@ function Increment({ handleDecrement, handleIncrement, count }) {
 }
 
 function AddToCart({ handleReset, product, count }) {
+  const prodTitle = product.title;
+  const { addToCart } = useContext(ShopContext);
   function handleAddToCart() {
     if (count > 0) {
       const itemData = {
-        product,
+        prodTitle,
         count,
       };
       console.log(itemData);
-      //do something with product and count
+      addToCart(itemData);
       handleReset();
     }
   }

@@ -1,5 +1,4 @@
 import CartAndSlider from "./Cart-and-slider";
-import { useState } from "react";
 
 export default function ProductGrid({ products, category }) {
   return (

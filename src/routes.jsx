@@ -10,17 +10,24 @@ import Womens, { womensLoader } from "./components/pages/womens";
 import Checkout from "./components/pages/checkout";
 
 //hooks
-import { useState } from "react";
+import { useState, createContext } from "react";
 
-/*Making this work is my only bet at passing props in a sane way that doesn't do anything 
-that breaks the rules of React */
+export const ShopContext = createContext({});
+
 function Layout({ child }) {
   const [cartItems, setCartItems] = useState([]);
+
+  function addToCart(item) {
+    setCartItems([...cartItems, item]);
+  }
+
   return (
     <>
-      <Header cartItems={cartItems} />
-      {child}
-      <Footer />
+      <ShopContext.Provider value={{ addToCart }}>
+        <Header cartItems={cartItems} addToCart={addToCart} />
+        {child}
+        <Footer />
+      </ShopContext.Provider>
     </>
   );
 }
