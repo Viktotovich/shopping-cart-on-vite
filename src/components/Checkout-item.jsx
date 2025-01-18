@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ShopContext } from "../routes";
 import "../styles/checkout-items.css";
 
 export default function CheckoutItem({ cartItem, index }) {
-  console.log(cartItem);
   return (
     <div className="checkout-container">
       <div className="tile-x-amount">
@@ -51,7 +51,12 @@ function UpdateAndChange({ quantity, cartItem, index }) {
   }
   return (
     <div className="update-cart-container">
-      <UpdateCart cartItem={cartItem} handleReset={resetCount} count={count} />
+      <UpdateCart
+        cartItem={cartItem}
+        handleReset={resetCount}
+        count={count}
+        index={index}
+      />
       <Increment
         handleDecrement={decrementCount}
         handleIncrement={incrementCount}
@@ -75,15 +80,17 @@ function Increment({ handleDecrement, handleIncrement, count }) {
   );
 }
 
-function UpdateCart({ handleReset, cartItem, count }) {
+function UpdateCart({ cartItem, count, index }) {
+  const { updateCart } = useContext(ShopContext);
+
   function handleUpdateCart() {
-    const newCartItem = cartItem.product;
+    const product = cartItem.product;
     const itemData = {
-      newCartItem,
+      product,
       count,
     };
-    //update cart
-    handleReset();
+
+    updateCart(index, itemData);
   }
 
   return <button onClick={handleUpdateCart}>Update</button>;

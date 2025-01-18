@@ -23,9 +23,15 @@ function Layout({ child }) {
     setCartItems(cartCopy);
   }
 
+  function updateCart(index, item) {
+    const cartCopy = cartItems.slice(0);
+    cartCopy[index] = item;
+    setCartItems(cartCopy);
+  }
+
   return (
     <>
-      <ShopContext.Provider value={{ addToCart, cartItems }}>
+      <ShopContext.Provider value={{ addToCart, cartItems, updateCart }}>
         <Header cartItems={cartItems} addToCart={addToCart} />
         {child}
         <Footer />

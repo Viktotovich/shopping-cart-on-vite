@@ -5,7 +5,6 @@ import "../../styles/no-items.css";
 
 export default function Checkout() {
   const { cartItems } = useContext(ShopContext);
-  console.log(cartItems);
 
   if (cartItems.length < 1) {
     return (
