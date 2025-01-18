@@ -1,0 +1,82 @@
+.checkout-container {
+  display: flex;
+  margin: 3rem 4rem;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  border: 1px solid rgba(56, 56, 59, 0.179);
+  border-radius: 25px;
+}
+
+.checkout-container .img-container img {
+  max-width: 50px;
+}
+
+.tile-x-amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-x-amount p:last-child {
+  margin-top: 0.5rem;
+}
+
+.u-or-r-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 4rem;
+}
+
+.update-cart-container {
+  display: flex;
+  padding: 0 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.update-cart-container .increment-container {
+  padding: 0;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(6, 3, 27, 0.685);
+  padding: 0.5rem;
+}
+
+.remove-from-cart-container {
+  display: flex;
+  justify-content: center;
+}
+
+.update-cart-container > button,
+.remove-from-cart-container > button {
+  background-color: rgba(6, 3, 27, 0.685);
+  appearance: none;
+  border: none;
+  color: white;
+  border-radius: 25px;
+}
+
+.update-cart-container > button {
+  padding: 0.6rem 0.9rem;
+}
+
+.remove-from-cart-container > button {
+  padding: 0.6rem 1.4rem;
+}
+
+.update-cart-container > button:hover,
+.remove-from-cart-container > button:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: all 0.1s;
+}
+
+.update-cart-container > button:hover {
+  background-color: rgba(35, 23, 110, 0.716);
+}
+
+.remove-from-cart-container > button:hover {
+  background-color: rgba(27, 3, 20, 0.685);
+}

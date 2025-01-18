@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/checkout-items.css";
 
 export default function CheckoutItem({ cartItem, index }) {
   console.log(cartItem);
