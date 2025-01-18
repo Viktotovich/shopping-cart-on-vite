@@ -18,12 +18,14 @@ function Layout({ child }) {
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(item) {
-    setCartItems([...cartItems, item]);
+    const cartCopy = cartItems.slice(0);
+    cartCopy.push(item);
+    setCartItems(cartCopy);
   }
 
   return (
     <>
-      <ShopContext.Provider value={{ addToCart }}>
+      <ShopContext.Provider value={{ addToCart, cartItems }}>
         <Header cartItems={cartItems} addToCart={addToCart} />
         {child}
         <Footer />

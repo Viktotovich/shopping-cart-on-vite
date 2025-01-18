@@ -50,15 +50,13 @@ function Increment({ handleDecrement, handleIncrement, count }) {
 }
 
 function AddToCart({ handleReset, product, count }) {
-  const prodTitle = product.title;
   const { addToCart } = useContext(ShopContext);
   function handleAddToCart() {
     if (count > 0) {
       const itemData = {
-        prodTitle,
+        product,
         count,
       };
-      console.log(itemData);
       addToCart(itemData);
       handleReset();
     }
