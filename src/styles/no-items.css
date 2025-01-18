@@ -1,0 +1,13 @@
+#empty-cart {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-items {
+  max-width: 45ch;
+  border: 1px solid rgba(56, 56, 59, 0.179);
+  border-radius: 25px;
+  padding: 1rem;
+  font-size: 1.2rem;
+}

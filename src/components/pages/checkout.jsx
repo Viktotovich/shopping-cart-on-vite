@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../../routes";
 import CheckoutItem from "../Checkout-item";
+import "../../styles/no-items.css";
 
 export default function Checkout() {
   const { cartItems } = useContext(ShopContext);
@@ -8,7 +9,7 @@ export default function Checkout() {
 
   if (cartItems.length < 1) {
     return (
-      <section>
+      <section id="empty-cart">
         {" "}
         <p className="no-items">
           You don't have anything in the cart yet! Add items to the cart and
